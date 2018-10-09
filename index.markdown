@@ -12,7 +12,7 @@ I am a screencastr at <http://haoduoshipin.com>.
 <p><br /><b>My Blog:</b></p>
   <ul class="posts">
     {% for post in site.posts %}
-      <li><a href="{{ post.url }}">{{ post.url }}</a></li>
+      <li><a href="/xx{{ post.url }}">/xx{{ post.url }}</a></li>
     {% endfor %}
   </ul>
 
