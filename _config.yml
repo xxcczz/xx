@@ -1,7 +1,5 @@
 auto        : false
 lsi         : false
-permalink   : none
 markdown    : kramdown
-gems: [jekyll-paginate]
-paginate: 12
-paginate_path: "page/:num/"
+paginate:5
+paginate_path: "page:num"
