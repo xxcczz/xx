@@ -2,12 +2,6 @@
 layout: default
 title: 阿呆
 ---
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li><a href="\xx{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
-	
 <!-- 遍历分页后的文章 -->
 {% for post in paginator.posts %}
 <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
