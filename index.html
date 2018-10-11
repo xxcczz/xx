@@ -3,7 +3,7 @@ layout: default
 title: 阿呆
 ---
 {% for post in paginator.posts %}
-   <li><a href="{{ \xxpost.url }}">{{ post.title }}</a></li>
+   <li><a href="\xx{{ post.url }}">{{ post.title }}</a></li>
 {% endfor %}
 
 {% if paginator.total_pages > 1 %}
