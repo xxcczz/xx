@@ -4,6 +4,12 @@ title: html
 ---
 <p>总文章数:{{ paginator.total_posts }}</p>
 
+<ol >
+{% for post in paginator.posts %}
+   <li><a href="\xx{{ post.url }}">{{ post.title }}</a></li>
+{% endfor %}
+</ol>
+
 {% if paginator.total_pages > 1 %}
 
 {% for page in (1..paginator.total_pages) %}
@@ -25,9 +31,3 @@ title: html
 {% endif %}
 
 {% endif %}
-
-<ol >
-{% for post in paginator.posts %}
-   <li><a href="\xx{{ post.url }}">{{ post.title }}</a></li>
-{% endfor %}
-</ol>
