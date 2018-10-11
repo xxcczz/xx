@@ -2,12 +2,7 @@
 layout: default
 title: html
 ---
-
-<ol reversed>
-{% for post in paginator.posts %}
-   <li><a href="\xx{{ post.url }}">{{ post.title }}</a></li>
-{% endfor %}
-</ol>
+<p>总文章数:{{ paginator.total_posts }}</p>
 
 {% if paginator.total_pages > 1 %}
 
@@ -30,4 +25,9 @@ title: html
 {% endif %}
 
 {% endif %}
-<p>总文章数:{{ paginator.total_posts }}</p>
+
+<ol >
+{% for post in paginator.posts %}
+   <li><a href="\xx{{ post.url }}">{{ post.title }}</a></li>
+{% endfor %}
+</ol>
