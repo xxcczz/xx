@@ -3,7 +3,7 @@ layout: default
 title: html
 ---
 
-<ol>
+<ol reversed>
 {% for post in paginator.posts %}
    <li><a href="\xx{{ post.url }}">{{ post.title }}</a></li>
 {% endfor %}
