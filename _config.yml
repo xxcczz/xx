@@ -1,4 +1,2 @@
-auto        : false
-lsi         : false
-permalink   : none
-markdown    : kramdown
+paginate: 10
+paginate_path: "page:num"
