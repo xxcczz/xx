@@ -1,6 +1,6 @@
 ---
 layout: default
-title: html({{ paginator.total_posts }})
+title: html
 ---
 {% for post in paginator.posts %}
    <li><a href="\xx{{ post.url }}">{{ post.title }}</a></li>
@@ -27,3 +27,4 @@ title: html({{ paginator.total_posts }})
 {% endif %}
 
 {% endif %}
+{{ paginator.total_posts }}
