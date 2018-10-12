@@ -1,33 +1,32 @@
----
-layout: default
+---		
+layout: default		
 title: html
----
-<p>总文章数:{{ paginator.total_posts }}</p>
+---		
+{% for post in paginator.posts %}		
+<!--遍历这一页的文章-->		
+	<h1><a href="{{ xx/post.url }}">{{ post.title }}</a></h1>	
+	<!--链接--><!--标题-->	
+{% endfor %}		
+<div class="pagination">		
+	{% if paginator.previous_page %}	
+	<!--上一页的页数-->	
+		<a href="{{ paginator.previous_page_path }}" class="previous">
+		<!--上一页的路径-->
+		上一页
+		</a>
+	{% else %}	
+		<span class="previous">上一页</span>
+	{% endif %}	
+<span class="page_number ">	
+	当前页数: {{ paginator.page }} / {{ paginator.total_pages }}
+	<!--当前页数--><!--总的页数-->
+</span>	
 
-<ol >
-{% for post in paginator.posts %}
-   <li><a href="\xx{{ post.url }}">{{ post.title }}</a></li>
-{% endfor %}
-</ol>
-
-{% if paginator.total_pages > 1 %}
-
-{% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"上一页</a>
-{% endif %}
-
-{% for page in (1..paginator.total_pages) %}
-    {% if page == paginator.page %}
-      <span class="active">{{ page }}</span>
-    {% elsif page == 1 %}
-      <a href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
-    {% else %}
-      <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
-    {% endif %}
-{% endfor %}
-
-{% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">下一页</a>
-{% endif %}
-
-{% endif %}
+	{% if paginator.next_page %}	
+	<!--下一页的页数-->	
+		<a href="{{ paginator.next_page_path }}" class="next">下一页</a>
+		<!--下一页的路径-->
+	{% else %}	
+		<span class="next ">下一页</span>
+	{% endif %}	
+</div>		
