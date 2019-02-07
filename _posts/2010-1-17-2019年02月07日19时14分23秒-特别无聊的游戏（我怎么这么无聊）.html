@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<title>我怎么这么无聊！</title>
+<meta charset="utf-8" />
+<style>
+a:hover{background-color: #ccc;}
+a{position:absolute;left:100px;top:300px;background-color: #fff}
+#dd{border:solid 1px #666;width:700px;height: 700px;position:relative;margin:0 auto;background-color: #66ccff}
+</style>
+</head>
+<body>
+<div id="dd">
+<a id="ck" onmouseover="tt()" onclick="aa()">来抓我啊</a>
+</div>
+<script>
+a=document.getElementById("ck");
+alert("快抓住它！");
+function aa(){
+  alert("啊啊被你抓到了。。。");
+}
+function tt(){
+  var t=setTimeout("mm()",160);
+}
+function mm(){
+  var c=Math.ceil(Math.random()*600);
+ b=Math.ceil(Math.random()*600);
+  c=c+"px";
+  b=b+"px";
+a.style.left=c;
+a.style.top=b;
+}
+
+</script>
+<!--++++++++++++++++++++++++++++++++++++++++by:wyx0k+++++++++++++++++++++++++++++++++++++++++++-->
+</body>
+</html>
