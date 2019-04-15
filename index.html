@@ -5,6 +5,7 @@ title: html
 {% for post in paginator.posts %}		
 <!--遍历这一页的文章-->		
 		<a href="/xx{{ post.url }}">{{ post.title }}</a>
+		<br />
 	<!--链接--><!--标题-->	
 {% endfor %}		
 <div class="pagination">		
